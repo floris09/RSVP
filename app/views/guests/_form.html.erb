@@ -1,0 +1,20 @@
+<%= form_for [@wedding, @wedding.guests.new] do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :adults %>
+  <%= f.text_field :adults %>
+
+  <%= f.label :children %>
+  <%= f.text_field :children %>
+
+  <%= f.label :food_preference %>
+  <%= f.text_field :food_preference %>
+
+  <%= f.check_box :attending %>
+  <%= label_tag(:attending, "I'm attending the wedding") %>
+
+  <%= f.submit (@guest.new_record? ? "Create" : "Update") %>
+
+<% end %>
